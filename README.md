@@ -60,14 +60,25 @@ br i1 %cmp, label %if.then, label %if.else
  br label %return
 ```
 
+## LLVM IR CFG (control flow graph)
+![](./readmeImages/common-cfg.jpg)
+
+
 
 ## llvm tool-chains
 ![](./readmeImages/llvm-tool-chain.jpg)
 
+### 探索LLVM生成的IR控制流
+
+### IF CFG of LLVM IR
+### IF-ELSE CFG of LLVM IR
+### IF-ELSE-IF CFG of LLVM IR
+### SWTICH CFG of LLVM IR
+### FOR CFG of LLVM IR
 
 
-
-
+## 实用链接
+[控制流图（Control Flow Graph）-（CFG）](https://blog.csdn.net/qq_42052733/article/details/115923993)
 
 
 
