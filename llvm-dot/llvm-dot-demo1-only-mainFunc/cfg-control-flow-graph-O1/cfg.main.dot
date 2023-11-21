@@ -1,0 +1,10 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x55b0d2963230 [shape=record,label="{entry:\l  %0 = load i32, i32* @x, align 4, !tbaa !2\l  %1 = load i32, i32* @y, align 4, !tbaa !2\l  br label %for.body\l}"];
+	Node0x55b0d2963230 -> Node0x55b0d29649a0;
+	Node0x55b0d2964b10 [shape=record,label="{for.cond.cleanup:                                 \l  ret i32 %mul1\l}"];
+	Node0x55b0d29649a0 [shape=record,label="{for.body:                                         \l  %i.07 = phi i32 [ 0, %entry ], [ %inc, %for.body ]\l  %z.06 = phi i32 [ 12, %entry ], [ %mul1, %for.body ]\l  %mul = mul i32 %0, %z.06\l  %mul1 = mul i32 %mul, %1\l  %inc = add nuw nsw i32 %i.07, 1\l  %exitcond = icmp eq i32 %inc, 10\l  br i1 %exitcond, label %for.cond.cleanup, label %for.body\l|{<s0>T|<s1>F}}"];
+	Node0x55b0d29649a0:s0 -> Node0x55b0d2964b10;
+	Node0x55b0d29649a0:s1 -> Node0x55b0d29649a0;
+}

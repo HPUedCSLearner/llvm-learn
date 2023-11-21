@@ -1,0 +1,5 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x562dc6bf92c0 [shape=record,label="{entry:\l  %0 = load i32, i32* @x, align 4, !tbaa !2\l  %1 = load i32, i32* @y, align 4, !tbaa !2\l  %mul = mul i32 %0, 12\l  %mul1 = mul i32 %mul, %1\l  %mul.1 = mul i32 %0, %mul1\l  %mul1.1 = mul i32 %mul.1, %1\l  %mul.2 = mul i32 %0, %mul1.1\l  %mul1.2 = mul i32 %mul.2, %1\l  %mul.3 = mul i32 %0, %mul1.2\l  %mul1.3 = mul i32 %mul.3, %1\l  %mul.4 = mul i32 %0, %mul1.3\l  %mul1.4 = mul i32 %mul.4, %1\l  %mul.5 = mul i32 %0, %mul1.4\l  %mul1.5 = mul i32 %mul.5, %1\l  %mul.6 = mul i32 %0, %mul1.5\l  %mul1.6 = mul i32 %mul.6, %1\l  %mul.7 = mul i32 %0, %mul1.6\l  %mul1.7 = mul i32 %mul.7, %1\l  %mul.8 = mul i32 %0, %mul1.7\l  %mul1.8 = mul i32 %mul.8, %1\l  %mul.9 = mul i32 %0, %mul1.8\l  %mul1.9 = mul i32 %mul.9, %1\l  ret i32 %mul1.9\l}"];
+}
