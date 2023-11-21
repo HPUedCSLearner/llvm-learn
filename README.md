@@ -8,6 +8,58 @@ learn llvm ir pass and someothers if needed
 -enable-new-pm=0
 -fno-discard-value-names
 ```
+## LLVM IR
+
+### @/% 意义
+@ 全局变量符号
+% 局部变量符号
+
+```c
+extern int a;
+extern int b;
+
+@a = external global i32, align 4
+@b = external global i32, align 4
+
+int a;
+int b;
+@a = global i32, align 4
+@b = global i32, align 4
+
+```
+
+
+### IR 数据类型
+
+i32 int32   int
+i1  int1    bool
+
+
+### 常用IR
+
+```bash
+alloca  : 分配栈空间变量
+%retval = alloca i32, align 4
+
+load    : 栈空间变量赋值，load a from b (<-)
+%0 = load i32, ptr @a, align 4
+
+store   : 栈空间变量赋值，store a to b (->)
+store i32 %2, ptr %retval, align 4
+
+
+cmp     : 比较指令
+%cmp = icmp slt i32 %0, %1
+
+
+br      : 跳转指令
+（条件跳转）
+br i1 %cmp, label %if.then, label %if.else
+
+（无条件br)
+ br label %return
+```
+
 
 ## llvm tool-chains
 ![](./readmeImages/llvm-tool-chain.jpg)

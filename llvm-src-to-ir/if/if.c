@@ -1,15 +1,22 @@
-#include <stdio.h>
 
+extern int a,b;
 
-void test() {
-int a = 3;
-int b = 4;
+int test(){
 
-
-if(a < b) {
-
-	printf("a < b\n");
-};
+	if(a<b) {
+		return a;
+	} else {
+		return b;
+	}
 
 }
 
+int test1(){
+
+	if(a<b) {
+		return a;
+	} else {
+		return b;
+	}
+
+}

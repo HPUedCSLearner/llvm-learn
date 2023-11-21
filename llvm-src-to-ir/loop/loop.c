@@ -2,12 +2,19 @@
 
 
 
-int sum(int n)
-{
-	int i = 0;
-	int sum_ = 0;
-	while(i < n){
-		sum_ += i;
+int while_sum(int n) {
+	int sum = 0;
+	while(n--) {
+		sum += n;
 	}
-	return sum_;
+	return sum;
+}
+
+
+int for_sum(int n) {
+	int sum = 0;
+	for(int i = 0; i < n; ++i) {
+		sum += i;
+	}
+	return sum;
 }
