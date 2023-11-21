@@ -80,7 +80,8 @@ br i1 %cmp, label %if.then, label %if.else
 ## 实用链接
 [控制流图（Control Flow Graph）-（CFG）](https://blog.csdn.net/qq_42052733/article/details/115923993)
 
-
+[LLVM IR入门指南](https://evian-zhang.github.io/llvm-ir-tutorial/)
+[LLVM IR入门指南(5)——控制语句](https://zhuanlan.zhihu.com/p/163328574)
 
 ## 问题记录
 ### llvm5 编译报错
