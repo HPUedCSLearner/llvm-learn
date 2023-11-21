@@ -1,0 +1,19 @@
+digraph "CFG for 'gsd' function" {
+	label="CFG for 'gsd' function";
+
+	Node0x560f0cf8dee0 [shape=record,label="{entry:\l  %x.addr = alloca i32, align 4\l  %y.addr = alloca i32, align 4\l  %q = alloca i32, align 4\l  %r = alloca i32, align 4\l  store i32 %x, i32* %x.addr, align 4\l  store i32 %y, i32* %y.addr, align 4\l  %0 = load i32, i32* %x.addr, align 4\l  store i32 %0, i32* %q, align 4\l  %1 = load i32, i32* %y.addr, align 4\l  store i32 %1, i32* %r, align 4\l  br label %while.cond\l}"];
+	Node0x560f0cf8dee0 -> Node0x560f0cf8ea50;
+	Node0x560f0cf8ea50 [shape=record,label="{while.cond:                                       \l  %2 = load i32, i32* %q, align 4\l  %3 = load i32, i32* %r, align 4\l  %cmp = icmp ne i32 %2, %3\l  br i1 %cmp, label %while.body, label %while.end\l|{<s0>T|<s1>F}}"];
+	Node0x560f0cf8ea50:s0 -> Node0x560f0cf8ec90;
+	Node0x560f0cf8ea50:s1 -> Node0x560f0cf8ed70;
+	Node0x560f0cf8ec90 [shape=record,label="{while.body:                                       \l  %4 = load i32, i32* %q, align 4\l  %5 = load i32, i32* %r, align 4\l  %cmp1 = icmp sgt i32 %4, %5\l  br i1 %cmp1, label %if.then, label %if.else\l|{<s0>T|<s1>F}}"];
+	Node0x560f0cf8ec90:s0 -> Node0x560f0cf8ef70;
+	Node0x560f0cf8ec90:s1 -> Node0x560f0cf8f1e0;
+	Node0x560f0cf8ef70 [shape=record,label="{if.then:                                          \l  %6 = load i32, i32* %q, align 4\l  %7 = load i32, i32* %r, align 4\l  %sub = sub nsw i32 %6, %7\l  store i32 %sub, i32* %q, align 4\l  br label %if.end\l}"];
+	Node0x560f0cf8ef70 -> Node0x560f0cf8f420;
+	Node0x560f0cf8f1e0 [shape=record,label="{if.else:                                          \l  %8 = load i32, i32* %r, align 4\l  %9 = load i32, i32* %q, align 4\l  %sub2 = sub nsw i32 %8, %9\l  store i32 %sub2, i32* %r, align 4\l  br label %if.end\l}"];
+	Node0x560f0cf8f1e0 -> Node0x560f0cf8f420;
+	Node0x560f0cf8f420 [shape=record,label="{if.end:                                           \l  br label %while.cond\l}"];
+	Node0x560f0cf8f420 -> Node0x560f0cf8ea50;
+	Node0x560f0cf8ed70 [shape=record,label="{while.end:                                        \l  %10 = load i32, i32* %q, align 4\l  ret i32 %10\l}"];
+}
